@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-senai">
+            <figure>
+                <div class="container">
+                    <img src="img\img (1)\img\senai.png" width="320" height="205" />
+                </div>
+            </figure>
+
+            <div class="pesquisa">
+                <input type="text" class="Busque" required placeholder="Busque produtos, marcas e muito mais">
+            </div>
+
+
+            <nav>
+                <a href="vender.html">Vender</a>
+                <a href="">Contato</a>
+                <a href="login.html">Entrar</a>
+                <a href="criarconta.html">Criar uma conta</a>
+                <a href="index.html">Página inicial</a>
+            </nav>
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+    </header>
+   
+    <main class="prod">
+            <section class="descri">
+                <div class="frit">
+                    <img src="img/img (1)/img/fritadeira.png" alt="frit">
+                </div>
+    
+                <div class="des">
+                    <p><strong>Fritadeira Elétrica Air Fryer 3,2l Eaf20 Electrolux 127v</strong></p>
+                    <br>
+                    <p><b>R$<span id="valor">670,00</span></b></p>
+                    <p class="verclaro">em 10x de R$<span id="parc">67,00</span> sem juros</p>
+                    <p class="verescuro">Frete grátis <span><i class="fa-solid fa-bolt"></i></span></p>
+                    <br>
+                    <p class="cinza">Potência: 1400W</p>
+                    <p class="cinza">Pesa 5.5kg.</p>
+                    <p class="cinza">Ideal para preparar suas refeições.</p>
+                </div>
+    
+                <div class="compra">
+                    <div class="button-compra">
+                        <button type="button"  id="diminuir">-</button>
+                        <p id="contador">1</p>
+                        <button type="button" id="aumentar">+</button>
+
+                    </div>
+
+                    <button type="button" class="bucomprar">
+                        Compre agora
+                    </button>
+                </div>
+    
+            </section>
+    
+            
+    </main>
+              
+<script>
+    let count = 1;
+    const contador = document.getElementById("contador");
+    const aumentarQtd = document.getElementById("aumentar");
+    const diminuirQtd = document.getElementById("diminuir");
+    const valorUn = document.getElementById("valor");
+    const valorParc = document.getElementById("parc");
+
+    function aumenta(){
+        count += 1;
+        calcula();
+    }
+
+    function diminui(){
+        if(count > 0){
+            count -= 1;
+            calcula();
+        }
+    }
+
+    function calcula(){
+        let valorproduto = 670;
+        const result = count * valorproduto;
+        valorUn.innerHTML = result;
+        valorParc.innerHTML = result / 10
+        contador.innerHTML = count;
+    }
+
+    aumentarQtd.addEventListener("click", aumenta);
+    diminuirQtd.addEventListener("click", diminui);
+
+    
+ </script>
+
+
+
+    <script src=" https://kit.fontawesome.com/8eabb72de4.js " crossorigin=" anonymous "> </script>
+</body>
+
+</html>

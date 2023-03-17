@@ -6,15 +6,17 @@
 }
 
 :root {
-    --cor-topo: #58261e;
+    --cor-topo: #cfca38;
     padding: 5px;
-
+    --cor-branca: #fff;
+    --cor-preta: black;
+    --cor-vermelha: rgb(168, 15, 15);
 }
 
 
 header .nav-senai{
     display: flex;
-    background-color: #58261e;
+    background-color: var(--cor-topo);
     color: #fff;
     grid-template-columns: 1fr 3fr;
     justify-content: space-between;
@@ -25,14 +27,12 @@ header .nav-senai{
 
 header .produtos{
     display: grid;
-    
-    display: flex;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding: 15px;
-    background-color: #58261e;
-   margin: 1px;
-   justify-content: space-between;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    background-color: var(--cor-topo);
+    margin: 1px;
+    justify-content: space-between;
     
 }
 
@@ -87,6 +87,35 @@ header input{
     font-size: 16px; 
     color: #333;
 } 
+
+header nav a:hover {
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #958c26;
+    box-shadow: rgba(241, 29, 29, 0.05) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .30s ease;
+    
+   }
+   
+ header nav a:hover {
+    letter-spacing: 3px;
+    background-color: rgb(169, 41, 41);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(245, 6, 6) 0px 7px 29px 0px;
+   }
+   
+   header nav a:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(245, 6, 6) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 400ms;
+   }
 
 main .od{
     display: grid;
@@ -147,7 +176,7 @@ main .verde{
 }
 
 footer{
-    background-color: #58261e;
+    background-color: var(--cor-topo);
     padding: 30px;
     display: flex;
     align-items: center;    
@@ -166,4 +195,171 @@ main .centraliza{
     
 }
 
+main #form #form-formulario form,
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
+}
+
+main #form #form-formulario form input,
+.formulario .formulario-form form input
+{
+    display: block; 
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cor-topo);
+    border-radius: 10px;
+    width: 350px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+main #form #form-formulario form button,
+.formulario .formulario-form form button{
+    padding: 8px;
+    border: none;
+    background-color: var(--cor-topo);
+    color: var(#fff);
+    border-radius: 10px;
+    width: 380px;
+    cursor: pointer;
+    display: block;
+}
+
+.cadastro_link {
+    display: block;
+    padding-top: 17px;
+}
+
+.cadastro{
+    margin-top: 10px;
+}
+
+.cadastro a{
+    color: var(#fff);
+    text-decoration: none;
+}
+
+.formulario .formulario-form form a{
+    color: var(black);
+    text-decoration: none;
+    text-align: center;
+}
+
+ .registro,.logar,.cadastro{
+    color: #fff;
+}
+.formulario{
+    padding: 25px;
+}
+
+.cadastro_link{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*produto direto*/
+.descri{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px;
+    font-size: 20px;
+}
+
+.frit img{
+    width: 400px;
+}
+
+main .button-compra{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+
+.bucomprar{
+    margin: 80px;
+    display: block;
+    padding: 10px;
+    background-color: rgb(130, 203, 179);
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+}
+
+main .button-compra {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.menos, .mais{
+    padding: 5px;
+    display: block;
+    background-color: var(--cor-topo);
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    outline: none;
+}
+
+.um{
+    padding: 0 22px;
+}
+
+html{
+    scroll-behavior: smooth;
+    padding: 0px !important;
+}
+
+    @media (max-width: 1025px) {
+        .varias {
+            grid-template-columns: 1fr ;
+        }
+        }
+
+        @media (max-width: 1045px){
+            .od div {
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+    
+
+
+}
+
+#num{
+    border: none;
+    text-align: center;
+    width: 36px;
+    margin: 0;
+    padding: 0px;
+}
+
+
+main{
+    background-color: #f3eb9a;
+}
+
+.container img {
+    width: 100%;
+}
+
+ .produtos img {
+    width: 100%;
+} 
+
+.produtos h4 {
+    font-size: 10px;
+    
+}
+
+.produtos{
+    overflow: auto;
+}
